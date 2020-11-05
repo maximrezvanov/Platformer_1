@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{AD565B26-D9C9-568F-7521-272E1C60CBBE}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BuffEmitter.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Player.cs" Line="47" Column="33" />
+      <File FileName="Assets/Scripts/CollisionDamage.cs" />
+      <File FileName="Assets/Scripts/InventoryUIController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerInventory.cs" Line="14" Column="38" />
+      <File FileName="Assets/Scripts/Menu.cs" />
+      <File FileName="Assets/Scripts/Arrow.cs" Line="10" Column="42" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Cell.cs" Line="31" Column="61" />
+      <File FileName="Assets/Scripts/ItemBase.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BuffReciever.cs" Line="34" Column="1" />
+      <File FileName="Assets/Scripts/BuffEmitter.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="471667a7-35c0-47aa-8760-1e43282b0793" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
