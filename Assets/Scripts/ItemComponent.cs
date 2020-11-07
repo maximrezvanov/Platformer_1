@@ -6,6 +6,7 @@ public class ItemComponent : MonoBehaviour, IObjectDestroyer
 {
     [SerializeField] private ItemType type;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] Animator animator;
     private Item item;
 
     public Item Item
@@ -15,7 +16,7 @@ public class ItemComponent : MonoBehaviour, IObjectDestroyer
 
     public void Destroy(GameObject gameObject)
     {
-       MonoBehaviour.Destroy(gameObject);
+        animator.SetTrigger("Destroy");
     }
 
     void Start()
@@ -27,13 +28,11 @@ public class ItemComponent : MonoBehaviour, IObjectDestroyer
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
+
 }
 
+ 
 
 public enum ItemType
 {
