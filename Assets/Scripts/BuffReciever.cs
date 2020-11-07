@@ -8,6 +8,10 @@ public class BuffReciever : MonoBehaviour
 
     private List<Buff> buffs;
     public Action OnBuffsChanged;
+    public List<Buff> Buffs
+    {
+        get { return buffs; }
+    }
 
 
     private void Start()

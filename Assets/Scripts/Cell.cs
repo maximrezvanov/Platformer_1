@@ -1,8 +1,11 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
+using System;
 
 public class Cell : MonoBehaviour
 {
+    public Action OnUpdateCell;
+
     [SerializeField] private Image icon;
     private Item item;
 
@@ -15,6 +18,9 @@ public class Cell : MonoBehaviour
     public void Init(Item item)
     {
         this.item = item;
+        if (item == null)
+            icon.sprite = null;
+        else
         icon.sprite = item.Icon;
     }
 
@@ -29,6 +35,8 @@ public class Cell : MonoBehaviour
             additiveBonus = item.Value
         };
         GameManager.Instance.inventory.buffReciever.AddBuff(buff);
+            if (OnUpdateCell != null)
+            OnUpdateCell();
         
 
     }

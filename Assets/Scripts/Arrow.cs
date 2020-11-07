@@ -17,11 +17,12 @@ public class Arrow : MonoBehaviour, IObjectDestroyer
         set { force = value;}
     }
 
-    public void SetImpulse( Vector2 direction, float force, Player player)
+    public void SetImpulse( Vector2 direction, float force, int bonusDamage, Player player)
     {
         this.player = player;
         trigerDamage.Init(this);
         trigerDamage.Parent = player.gameObject;
+        trigerDamage.Damage += bonusDamage;
         rigidbody.AddForce(direction * force, ForceMode2D.Impulse);
         if (force < 0)
             transform.rotation = Quaternion.Euler(0, 180, 0);

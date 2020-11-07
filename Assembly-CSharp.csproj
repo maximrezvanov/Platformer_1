@@ -75,6 +75,8 @@
     <Compile Include="Assets/Scripts/Arrow.cs" />
     <Compile Include="Assets/Scripts/Menu.cs" />
     <Compile Include="Assets/Scripts/InventoryUIController.cs" />
+    <Compile Include="Assets/Scripts/PressedButton.cs" />
+    <Compile Include="Assets/Scripts/UICharacterController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -19,7 +19,7 @@ MonoBehaviour:
       \u0441\u0438\u043B\u0443 \u0443\u0440\u043E\u043D\u0430"
     icon: {fileID: 21300000, guid: c9fec619470ca4879a73dedc30215cb8, type: 3}
     type: 2
-    value: 50
+    value: 5
   - id: 2
     itemName: "\u0417\u0435\u043B\u044C\u0435 \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F"
     description: "\u043A\u0440\u0430\u0442\u043A\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0435
@@ -41,5 +41,5 @@ MonoBehaviour:
       \u0441\u0438\u043B\u0443 \u0443\u0440\u043E\u043D\u0430"
     icon: {fileID: 21300000, guid: c9fec619470ca4879a73dedc30215cb8, type: 3}
     type: 2
-    value: 50
+    value: 5
   currentIndex: 0
