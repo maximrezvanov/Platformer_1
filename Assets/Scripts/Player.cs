@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     public Health Health { get { return health; } }
     [SerializeField] public Item item;
     [SerializeField] private BuffReciever buffReciever;
+    [SerializeField] private Camera camera;
 
     public float bonusHealth;
     public float bonusDamage;
@@ -232,6 +233,12 @@ public class Player : MonoBehaviour
         arrowTemp.transform.parent = arrowSpawnPoint;
         arrowTemp.transform.position = arrowSpawnPoint.transform.position;
         arrowTemp.gameObject.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        camera.transform.parent = null;
+        camera.enabled = true;
     }
 
 }

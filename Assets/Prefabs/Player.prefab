@@ -28,7 +28,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1559533901664515735}
   m_Father: {fileID: 7551276007284521868}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -222,7 +223,6 @@ Transform:
   - {fileID: 1858533281}
   - {fileID: 2378569967313746395}
   - {fileID: 2328174912131274852}
-  - {fileID: 1559533901664515735}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  force: 4
+  force: 3
   rigidboby: {fileID: 7551276007284521870}
   minimalHeight: -15
   isCheatMode: 1
@@ -333,6 +333,10 @@ MonoBehaviour:
     type: 0
     value: 0
   buffReciever: {fileID: 6262422866232904978}
+  camera: {fileID: 1858533280}
+  bonusHealth: 0
+  bonusDamage: 0
+  bonusForce: 0
 --- !u!114 &2633040066913234813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,11 +447,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7806195735084802150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.9731617, y: 4.65, z: 2.68}
+  m_LocalPosition: {x: 5.9731617, y: 2.65, z: 12.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7551276007284521868}
-  m_RootOrder: 3
+  m_Father: {fileID: 1858533281}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6492265038100940434
 SpriteRenderer:
