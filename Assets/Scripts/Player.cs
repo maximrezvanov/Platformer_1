@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
     private Arrow currentArrow;
     private List<Arrow> arrowPool;
     private UICharacterController controller;
+    public AudioClip jumpSound;
+    public AudioClip bowShoot;
+    private new AudioSource audio;
 
     [SerializeField] Arrow arrow;
     [SerializeField] private Transform arrowSpawnPoint;
@@ -49,7 +52,7 @@ public class Player : MonoBehaviour
     {
         AddCoins();
         СreateArrows();
-
+        audio = GetComponent<AudioSource>();
         buffReciever.OnBuffsChanged += AcceptBuffs;
 
     }
@@ -104,6 +107,7 @@ public class Player : MonoBehaviour
             rigidboby.AddForce(Vector2.up * (force + bonusForce), ForceMode2D.Impulse);
             animator.SetTrigger("StartJump");
             isJumping = true;
+            audio.PlayOneShot(jumpSound);
         }
     }
 
@@ -171,6 +175,7 @@ public class Player : MonoBehaviour
 
             animator.SetTrigger("Attack");
 
+
         }
 
     }
@@ -196,6 +201,7 @@ public class Player : MonoBehaviour
 
         currentArrow = Instantiate(arrow, arrowSpawnPoint.position, Quaternion.identity);
         currentArrow.SetImpulse(Vector2.right, spriteRenderer.flipX ? -force * shootForce : force * shootForce, (int)bonusDamage, this);
+        audio.PlayOneShot(bowShoot);
         StartCoroutine(PauseToShoot());
 
     }

@@ -7,6 +7,7 @@ public class ItemComponent : MonoBehaviour, IObjectDestroyer
     [SerializeField] private ItemType type;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] Animator animator;
+    [SerializeField] GameObject soundEffect;
     private Item item;
 
     public Item Item
@@ -17,6 +18,7 @@ public class ItemComponent : MonoBehaviour, IObjectDestroyer
     public void Destroy(GameObject gameObject)
     {
         animator.SetTrigger("Destroy");
+        soundEffect.SetActive(true);
     }
 
     void Start()

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CollisionDamage : MonoBehaviour
 {
-    public int damage = 10;
+    [SerializeField] GameObject bowlSound;
     [SerializeField] private Animator animator;
     [SerializeField] SpriteRenderer sprite;
     private Health health;
+    public int damage = 10;
     private float direction;
     public float Direction
     {
@@ -34,10 +35,19 @@ public class CollisionDamage : MonoBehaviour
     public void SetDamage()
     {
         if (health != null)
+        {
             health.TakeHit(damage);
+        }
         health = null;
         direction = 0;
         animator.SetFloat("Direction", 0f);
+
+    }
+
+    public void testSound()
+    {
+        animator.SetTrigger("SetDamage");
+        bowlSound.SetActive(true);
 
     }
 }

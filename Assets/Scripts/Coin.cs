@@ -5,7 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-
+    [SerializeField] GameObject soundEffect;
 
     private void Start()
     {
@@ -16,10 +16,14 @@ public class Coin : MonoBehaviour
     public void StartDestroy()
     {
         animator.SetTrigger("StartDestroy");
+        soundEffect.SetActive(true);
+        
     }
+    //audio.PlayOneShot(coinSound);
 
     public void EndDestroy()
     {
+
         Destroy(gameObject);
     }
 

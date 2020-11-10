@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -17,6 +16,7 @@ public class PlayerInventory : MonoBehaviour
     {
         get { return items; }
     }
+   
 
     private void Start()
     {
@@ -40,6 +40,7 @@ public class PlayerInventory : MonoBehaviour
 
             coinsCount++;
             coinsText.text = coinsCount.ToString();
+            
         }
         if (GameManager.Instance.itemsContainer.ContainsKey(collision.gameObject))
         {
